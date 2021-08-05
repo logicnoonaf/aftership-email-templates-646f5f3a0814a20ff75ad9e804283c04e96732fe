@@ -1,0 +1,67 @@
+<mj-include path="./product-recommendation.inline.css" type="css" css-inline="inline" />
+
+<!-- item -->
+<mj-column css-class="sm-50 fix-table" width="33.33%" padding="8px" inner-background-color="#fff">
+  <mj-image fluid-on-mobile="true" padding="0" src="https://dropshipping.am-static.com/images/p/3c84df28b17b61fcf33f2a047e215bd9.jpg?q=85" alt="product image" />
+  <mj-text padding="16px 16px 0">
+    <div class="two-line">12PCS Popular Style Eye Shade 12PCS Popular Style Eye Shade</div>
+  </mj-text>
+  <mj-text padding="0 16px">
+    <strong>$666.66</strong>
+  </mj-text>
+  <mj-text padding="0 16px 16px">
+    <div class="pr-price-compare flex space-between">
+      <del>$666.66</del>
+      <div class="pr-save">dsa</div>
+    </div>
+  </mj-text>
+</mj-column>
+<!-- item -->
+<mj-column css-class="sm-50 fix-table" width="33.33%" padding="8px" inner-background-color="#fff">
+  <mj-image fluid-on-mobile="true" padding="0" src="https://dropshipping.am-static.com/images/p/3c84df28b17b61fcf33f2a047e215bd9.jpg?q=85" alt="product image" />
+  <mj-text padding="16px 16px 0">
+    <div class="two-line">12PCS Popular Style Eye Shade 12PCS Popular Style Eye Shade</div>
+  </mj-text>
+  <mj-text padding="0 16px">
+    <strong>$666.66</strong>
+  </mj-text>
+  <mj-text padding="0 16px 16px">
+    <div class="pr-price-compare flex space-between">
+      <del>$666.66</del>
+      <div class="pr-save">dsa</div>
+    </div>
+  </mj-text>
+</mj-column>
+<!-- item -->
+<mj-column css-class="sm-50 fix-table" width="33.33%" padding="8px" inner-background-color="#fff">
+  <mj-image fluid-on-mobile="true" padding="0" src="https://dropshipping.am-static.com/images/p/3c84df28b17b61fcf33f2a047e215bd9.jpg?q=85" alt="product image" />
+  <mj-text padding="16px 16px 0">
+    <div class="two-line">12PCS Popular Style Eye Shade 12PCS Popular Style Eye Shade</div>
+  </mj-text>
+  <mj-text padding="0 16px">
+    <strong>$666.66</strong>
+  </mj-text>
+  <mj-text padding="0 16px 16px">
+    <div class="pr-price-compare flex space-between">
+      <del>$666.66</del>
+      <div class="pr-save">dsa</div>
+    </div>
+  </mj-text>
+</mj-column>
+
+<!-- item -->
+<mj-column css-class="sm-50 pc-hide fix-table" width="33.33%" padding="8px" inner-background-color="#fff">
+  <mj-image fluid-on-mobile="true" padding="0" src="https://dropshipping.am-static.com/images/p/3c84df28b17b61fcf33f2a047e215bd9.jpg?q=85" alt="product image" />
+  <mj-text padding="16px 16px 0">
+    <div class="two-line">12PCS Popular Style Eye Shade 12PCS Popular Style Eye Shade</div>
+  </mj-text>
+  <mj-text padding="0 16px">
+    <strong>$666.66</strong>
+  </mj-text>
+  <mj-text padding="0 16px 16px">
+    <div class="pr-price-compare flex space-between">
+      <del>$666.66</del>
+      <div class="pr-save">dsa</div>
+    </div>
+  </mj-text>
+</mj-column>

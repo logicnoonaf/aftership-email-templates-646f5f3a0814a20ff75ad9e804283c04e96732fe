@@ -1,0 +1,316 @@
+<html>
+
+<body>
+    <spacer size="30"></spacer>
+    <center>
+        <img style="width: 160px"
+            src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/986ce085-178c-4cc1-9ad9-71d5114f5f41/740x139.png">
+    </center>
+    <spacer size="20"></spacer>
+    <center>
+        <span class="DisplayText">🎉 Your weekly report</span>
+    </center>
+    <spacer size="20"></spacer>
+
+    <row>
+        <columns>
+            <center>
+                <span>Hi{%if first_name!=""%}&nbsp;[[first_name]]{%endif%}{%if last_name!=""%}&nbsp;[[last_name]]{%endif%},</span>
+            </center>
+        </columns>
+    </row>
+    <row>
+        <columns>
+            <center>
+                <span>Here's a summary of your shipments performance for the last 30 days.</span>
+            </center>
+        </columns>
+    </row>
+    <container>
+        <div class="Card">
+            <div class="Card__Section">
+                <row>
+                    <columns>
+                        <div class="Title">Total shipments</div>
+                    </columns>
+                </row>
+                <row>
+                    <columns>
+                        <div class="DisplayText">[[total_shipments]]</div>
+                    </columns>
+                </row>
+
+
+                <row>
+                    <columns small="6">
+                        <p>Delivery rate</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[delivery_rate]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p>Valid tracking rate</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[valid_tracking_rate]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p>Return to sender rate</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[return_to_sender_rate]]</p>
+                    </columns>
+                </row>
+            </div>
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Card__SectionHeader">shipments by status</div>
+                    </columns>
+                </row>
+
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #254974;"></span> Info received</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[info_received_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #4598d6;"></span> In transit</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[in_transit_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #e77e10"></span> Out for delivery
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[out_for_delivery_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #4baa67;"></span> Delivered</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[delivered_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #b74331"></span> Exception</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[exception_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #9b59b6"></span> Failed attempt</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[attempt_fail_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #909eab"></span> Expired</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[expired_count]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p><span class="Custom-Badge__Pip" style="color: #cccccc"></span> Pending</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[pending_count]]</p>
+                    </columns>
+                </row>
+            </div>
+        </div>
+
+
+    </container>
+    <spacer size="16"></spacer>
+
+    {%if country_list|length>=3 or courier_list|length>=3%}
+    <container>
+        <div class="Card">
+            {%if courier_list|length>=3%}
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Card__SectionHeader">top 3 couriers</div>
+                    </columns>
+                </row>
+
+                {%for courier in courier_list%}
+                <row>
+                    <columns small="6">
+                        <p>[[courier.name]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[courier.count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[courier.rate]]</p>
+                    </columns>
+                </row>
+                {%endfor%}
+            </div>
+            {%endif%}
+
+            {%if country_list|length>=3%}
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Card__SectionHeader">top 3 destinations</div>
+                    </columns>
+                </row>
+
+                {%for country in country_list%}
+                <row>
+                    <columns small="6">
+                        <p>[[country.name]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[country.count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[country.rate]]</p>
+                    </columns>
+                </row>
+                {%endfor%}
+
+            </div>
+            {%endif%}
+        </div>
+    </container>
+    {%endif%}
+
+    <spacer size="20"></spacer>
+
+    <row>
+        <columns>
+            <center>
+                <button class="warning radius large" href="https://admin.aftership.com/dashboard/shipment">View full
+                    report</button>
+            </center>
+        </columns>
+    </row>
+
+    <container>
+        <div class="Card">
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText">✨Recommended Products✨</div>
+                        </center>
+                    </columns>
+                </row>
+                <spacer size="20"></spacer>
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="https://conversions.am-usercontent.com/images/popup_background_image_6c27b2a104924d5799f59674e5ca554a.jpeg"
+                            alt="Postmen">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">Postmen (FREE)</div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Automate your shipping process and enjoy the lowest USPS discounted rates. </span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://admin.postmen.com?utm_source=weeklyreport&utm_medium=as">Start
+                                free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="https://conversions.am-usercontent.com/images/popup_background_image_4f34a0fa2f9c47f3b24bb44ffb311dc5.jpeg"
+                            alt="Returns Center">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">Returns center</div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Provide customers the best returns experience.</span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://admin.returnscenter.com/?utm_souce=weeklyreport&utm_medium=as">Start
+                                free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="https://conversions.am-usercontent.com/images/popup_background_image_2a9d7fd2382445018c4dae1dad458d27.jpeg"
+                            alt="Marketing emails(Free)">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">Marketing emails (FREE)</div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Send beautiful welcome emails and newsletter with higher open and click rate!</span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://conversions.automizely.com/emails?utm_source=weeklyreport&utm_medium=as">Start free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+        </div>
+    </container>
+
+    <center>
+        <menu>
+            <item href="https://www.facebook.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/56d472f9-6ab7-49bf-af4f-867b1ee2fe97/128x128.png" />
+            </item>
+            <item href="https://twitter.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/ecb8b731-caf6-4a69-a29b-49e2d699ddb2/128x128.png" />
+            </item>
+            <item href="https://www.instagram.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/52b8b113-ed1c-4fd1-91b1-e447b21deeb0/128x128.png" />
+            </item>
+        </menu>
+    </center>
+    <spacer size="10"></spacer>
+
+    <center style="color: #828B91; font-size: 12px;">
+        <a href="https://www.aftership.com/contact-us" style="color: #828B91">Contact us</a> | <a href="[unsubscribe]"
+            style="color: #828B91">Unsubscribe</a>
+    </center>
+    <spacer size="10"></spacer>
+    <center style="color: #828B91">
+        2711 Centerville Road, Wilmington, Delaware 19808, United States
+    </center>
+    <spacer size="10"></spacer>
+    <div style="color: #828B91; text-align: center;">
+        @ 2021 <a href="https://www.aftership.com" style="color: #828B91">AfterShip</a>
+    </div>
+    <spacer size="10"></spacer>
+
+</body>
+
+</html>

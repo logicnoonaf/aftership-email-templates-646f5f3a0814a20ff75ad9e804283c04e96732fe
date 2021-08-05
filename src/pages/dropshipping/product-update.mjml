@@ -1,0 +1,101 @@
+<mjml lang="en">
+  <mj-head>
+    <mj-attributes>
+      <mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700" />
+      <mj-all color="#000" font-family="Roboto, -apple-system, Segoe UI, Arial, sans-serif" />
+      <mj-divider padding="0" border-width="1px" border-color="#ececec" />
+      <mj-wrapper css-class="wrapper" padding="0" />
+      <mj-section css-class="section" padding="20px 40px" background-color="#fff" />
+      <mj-button background-color="#FF2368" color="#fff" />
+
+      <mj-text padding="0" font-size="14px" line-height="20px" />
+      <mj-class name="link" background-color="none" color="#FF2368" padding="0" inner-padding="4px" />
+      <mj-class name="body" font-size="16px" line-height="22px" color="#222" />
+
+
+      <mj-title>Inventory has been adjusted.</mj-title>
+      <mj-preview>Please review the changes</mj-preview>
+    </mj-attributes>
+    <mj-include path="./product-update.inline.css" type="css" css-inline="inline" />
+    <mj-include path="./product-update.css" type="css" />
+  </mj-head>
+
+  <mj-body background-color="#E5E5E5">
+    <mj-wrapper>
+      <mj-include path="./partials/product-logo.mjml" />
+
+      <mj-section css-class="section headline" background-color="#FFBCC5" padding="30px 40px">
+        <mj-include path="./partials/headline.mjml" />
+      </mj-section>
+
+      <!-- Introduction -->
+      <mj-section padding-bottom="0">
+        <mj-include path="./partials/introduction.mjml" />
+      </mj-section>
+      <!-- Inner section divider -->
+      <mj-include path="./partials/section-inner-divider.mjml" />
+      <!-- Product list section -->
+      <mj-section padding-top="0" padding-bottom="16px">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+      <mj-section padding-top="0" padding-bottom="16px">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+      <!-- ⚠️ ⚠️ The last one set padding-bottom to 0 ⚠️ ⚠️ -->
+      <mj-section padding-top="0" padding-bottom="0">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+      <!-- Section divider -->
+      <mj-include path="./partials/section-divider.mjml" />
+      <!-- Introduction -->
+      <mj-section padding-top="0" padding-bottom="0">
+        <mj-include path="./partials/introduction.mjml" />
+      </mj-section>
+      <!-- Inner section divider -->
+      <mj-include path="./partials/section-inner-divider.mjml" />
+      <!-- Product list section -->
+      <mj-section padding-top="0" padding-bottom="16px">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+      <mj-section padding-top="0" padding-bottom="16px">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+      <mj-section padding-top="0" padding-bottom="16px">
+        <mj-include path="./partials/product-list/product-list.mjml" />
+      </mj-section>
+
+      <!-- Product recomendation -->
+      <mj-section background-color="#FFF1F6" padding-bottom="8px">
+        <mj-column>
+          <mj-text font-size="18px" line-height="22px" align="center"><strong>🔥 Hot selling products</strong></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="section sm-no-x-padding" background-color="#FFF1F6" padding="0 32px">
+        <mj-include path="./partials/product-recommendation/product-recommendation.mjml" />
+      </mj-section>
+      <mj-section background-color="#FFF1F6" padding-top="8px">
+        <mj-column>
+          <mj-button href="https://dropshipping.automizely.com/products?utm-source=notice-prod-change&utm-meduim=email" target="_blank" inner-padding="9px 12px" padding="0" font-size="14px" line-height="22px" font-weight="bold">
+            Find more products
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Action text -->
+      <mj-section padding-top="48px" padding-bottom="28px">
+        <mj-column>
+          <mj-text mj-class="body" align="center">
+            Any questions?
+            <a class="link" href="https://go.crisp.chat/chat/embed/?website_id=9aad23dc-8d7e-46d0-8ff2-2dbb12e05036" target="_blank">Chat with us 24/7</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Section divider -->
+      <mj-include path="./partials/section-divider.mjml" />
+
+      <!-- Footer -->
+      <mj-include path="./partials/footer/footer.mjml" />
+
+    </mj-wrapper>
+  </mj-body>
+</mjml>

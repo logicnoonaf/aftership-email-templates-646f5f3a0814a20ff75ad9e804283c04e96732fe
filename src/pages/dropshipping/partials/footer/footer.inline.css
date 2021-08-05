@@ -1,0 +1,6 @@
+.ft-txt,
+.ft-txt a,
+.ft-txt > div {
+    color: #b0b0b0 !important;
+    line-height: 24px !important;
+}

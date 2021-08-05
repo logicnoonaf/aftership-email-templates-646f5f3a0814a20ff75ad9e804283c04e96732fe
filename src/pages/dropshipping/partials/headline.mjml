@@ -1,0 +1,6 @@
+ <!-- Call to action -->
+ <mj-column>
+   <mj-text font-size="32px" line-height="40px" font-weight="bold" align="center">
+     Inventory has been adjusted.
+   </mj-text>
+ </mj-column>

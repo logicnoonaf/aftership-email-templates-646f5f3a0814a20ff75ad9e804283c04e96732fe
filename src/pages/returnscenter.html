@@ -1,0 +1,259 @@
+<html>
+<body>
+    <spacer size="30"></spacer>
+    <center>
+        <img style="width: 250px;"
+            src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/0bf4603c-1b1e-4ce0-b291-cd1307870568/315x30.png">
+    </center>
+    <spacer size="20"></spacer>
+    <center>
+        <span class="DisplayText">🎉 Your weekly report</span>
+    </center>
+    <spacer size="20"></spacer>
+    ​
+    <row>
+        <columns>
+            <center>
+                <span>Hi{%if first_name!=""%}&nbsp;[[first_name]]{%endif%}{%if last_name!=""%}&nbsp;[[last_name]]{%endif%},</span>
+            </center>
+        </columns>
+    </row>
+    <row>
+        <columns>
+            <center>
+                <span>Here's a summary of your returns performance for the last 7 days.</span>
+            </center>
+        </columns>
+    </row>
+    <container>
+        <div class="Card">
+            <div class="Card__Section">
+                <row>
+                    <columns>
+                        <div class="Title">Total returns</div>
+                    </columns>
+                </row>
+                <row>
+                    <columns>
+                        <div class="DisplayText">[[total_returns]]</div>
+                    </columns>
+                </row>
+            </div>
+        </div>
+    </container>
+    <spacer size="16"></spacer>
+    <container>
+        <div class="Card">
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Title">Returns by reason</div>
+                    </columns>
+                </row>
+                {%for reason in reason_list%}
+                <row>
+                    <columns small="6">
+                        <p>[[reason.name]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[reason.count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[reason.rate]]</p>
+                    </columns>
+                </row>
+                {%endfor%}
+            </div>
+        </div>
+    </container>
+    <spacer size="16"></spacer>
+    <container>
+        <div class='Card'>
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Title">Returns by resolution</div>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p>Refund to original payment</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[original_payment_count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[original_payment_rate]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p>Refund to store credit</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[store_credit_count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[store_credit_rate]]</p>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="6">
+                        <p>Exchange</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[exchange_count]]</p>
+                    </columns>
+                    <columns small="3">
+                        <p class="text-right">[[exchange_rate]]</p>
+                    </columns>
+                </row>
+            </div>
+        </div>
+    </container>
+    <spacer size="16"></spacer>
+    <container>
+        <div class='Card'>
+            <div class="Card__Section">
+                <row>
+                    <columns small="12">
+                        <div class="Title">Most returned SKUs</div>
+                    </columns>
+                </row>
+                <row>
+                    <columns small="12">
+                        <div class="Card__SectionHeader">Top 5 returned SKUs</div>
+                    </columns>
+                </row>
+                {%for sku in sku_list%}
+                <row>
+                    <columns small="6">
+                        <p>[[sku.name]]</p>
+                    </columns>
+                    <columns small="6">
+                        <p class="text-right">[[sku.count]]</p>
+                    </columns>
+                </row>
+                {%endfor%}
+            </div>
+        </div>
+    </container>
+    <spacer size="40"></spacer>
+    <row>
+        <columns>
+            <center>
+                <button class="customize-returns-center radius large"
+                    href="https://admin.returnscenter.com/analytics">View full
+                    report</button>
+            </center>
+        </columns>
+    </row>
+    ​
+    <container>
+        <div class="Card">
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText">✨Recommended Products✨</div>
+                        </center>
+                    </columns>
+                </row>
+                <spacer size="20"></spacer>
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="https://conversions.am-usercontent.com/images/popup_background_image_73e44572bb4743d1b63c88be7f045c92.jpeg"
+                            alt="AfterShip">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">AfterShip </div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Increase customer engagement with branded tracking page and
+                            updates.</span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://admin.aftership.com?utm_souce=weeklyreport&utm_medium=rc">Start free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="https://conversions.am-usercontent.com/images/popup_background_image_6c27b2a104924d5799f59674e5ca554a.jpeg"
+                            alt="Postmen">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">Postmen (FREE)</div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Automate your shipping process and enjoy the lowest USPS discounted rates. </span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://admin.postmen.com?utm_source=weeklyreport&utm_medium=rc">Start
+                                free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+            <div class="Card__Section" style="padding: 20px 0 12px 0;">
+                <row>
+                    <columns large="2">
+                        <img style="width: 110px;"
+                            src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/6e8ab95c-6134-4649-88c0-22d51e54e5ff/220x164.png"
+                            alt="Returns Center">
+                    </columns>
+                    <columns large="6">
+                        <div class="DisplayText__Small">Coupon popup and bar (FREE)</div>
+                        <spacer size="11"></spacer>
+                        <span class="TextStyle__Subdued">Setup popup to collect visitors emails, a sticky coupon bar
+                            will automatically show after subscription.</span>
+                    </columns>
+                    <columns large="2">
+                        <p class="text-right">
+                            <a href="https://conversions.automizely.com/popups?utm_souce=weeklyreport&utm_medium=rc">Start
+                                free</a>
+                        </p>
+                    </columns>
+                </row>
+            </div>
+        </div>
+    </container>
+    ​
+    <spacer size='60'></spacer>
+    ​
+    <center>
+        <menu>
+            <item href="https://www.facebook.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/56d472f9-6ab7-49bf-af4f-867b1ee2fe97/128x128.png" />
+            </item>
+            <item href="https://twitter.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/ecb8b731-caf6-4a69-a29b-49e2d699ddb2/128x128.png" />
+            </item>
+            <item href="https://www.instagram.com/aftership"><img style="width:24px;display:inline-block;"
+                    src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/52b8b113-ed1c-4fd1-91b1-e447b21deeb0/128x128.png" />
+            </item>
+        </menu>
+    </center>
+    <spacer size="10"></spacer>
+    ​
+    <center style="color: #828B91; font-size: 12px;">
+        <a href="https://www.returnscenter.com/contact-us" style="color: #828B91">Contact us</a> | <a
+            href="[unsubscribe]" style="color: #828B91">Unsubscribe</a>
+    </center>
+    <spacer size="10"></spacer>
+    <center style="color: #828B91">
+        2711 Centerville Road, Wilmington, Delaware 19808, United States
+    </center>
+    <spacer size="10"></spacer>
+    <center style="color: #828B91">
+        © 2021 <a href="https://www.returnscenter.com/" style="color: #828B91">AfterShip</a>
+    </center>
+    <spacer size="10"></spacer>
+</body>
+​
+
+</html>

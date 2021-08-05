@@ -1,0 +1,35 @@
+.pl-wrap {
+    display: flex !important;
+}
+
+.pl-thumb {
+    min-width: 60px !important;
+    flex-shrink: 0;
+}
+.pl-content {
+    flex-grow: 1;
+}
+.pl-content table {
+    table-layout: fixed;
+}
+
+.pl-content-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    min-height: 60px;
+}
+.pl-text-wrap {
+    flex-grow: 1;
+}
+.pl-price {
+    padding-top: 8px;
+}
+
+.pl-action {
+    flex-shrink: 0;
+    padding-left: 16px;
+    color: #ff2368;
+    padding: 0 4px;
+    text-decoration: none;
+}

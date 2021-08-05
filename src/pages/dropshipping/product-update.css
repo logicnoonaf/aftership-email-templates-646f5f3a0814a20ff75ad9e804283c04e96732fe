@@ -1,0 +1,28 @@
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        border: 20px solid #fff;
+        padding: 8px 8px 26px;
+        background-color: #f4f4f4;
+    }
+    .section:not(.fix-padding) > table > tbody > tr > td {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    .section.sm-no-x-padding > table > tbody > tr > td {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .headline > table > tbody > tr > td {
+        padding: 20px 12px !important;
+    }
+
+    .pc-hide {
+        /* the column item default is inline-block */
+        display: inline-block !important;
+    }
+
+    .sm-50 {
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+}

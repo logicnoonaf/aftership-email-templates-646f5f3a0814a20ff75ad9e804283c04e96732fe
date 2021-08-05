@@ -1,0 +1,66 @@
+.shipment-review-daily__star {
+  margin-top: 40px;
+  img {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.shipment-review-daily__comment {
+  font-size: 12px;
+  padding: 0 !important;
+  display: inline-block;
+  border-radius: 100px;
+  border-color: #dfe3e8;
+  border-style: solid;
+  border-width: 6px 8px;
+  line-height: 1.23;
+  background-color: #dfe3e8;
+  color: #454f5b;
+  white-space: nowrap;
+  &:last-child {
+    padding-right: 0 !important;
+  }
+}
+
+.shipment-review-daily__info {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  & > div {
+    margin-bottom: 12px;
+  }
+  span {
+    display: inline-block;
+    &:first-child {
+      width: 100px;
+      color: #989898;
+    }
+  }
+  img {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  hr {
+    height: 1px;
+    opacity: 0.65;
+    background-color: #dfe3e8;
+  }
+}
+
+.shipment-review-daily__hr {
+  margin: 0;
+  border: 0;
+  height: 1px;
+  opacity: 0.65;
+  background-color: #dfe3e8;
+}
+
+.shipment-review-daily__btn {
+  margin-top: 36px;
+  margin-bottom: -16px; // for cancel foundation button margin-bottom
+}

@@ -1,0 +1,8 @@
+ <mj-column>
+   <mj-text padding-bottom="16px" font-size="18px" line-height="22px" font-weight="bold" align="center">
+     Low inventory level (&lt;10)
+   </mj-text>
+   <mj-text font-size="16px" line-height="22px" align="center">
+     Hide your product listing(s) in case the stock level drops to 0. We will let you know if the stock level goes back to normal.
+   </mj-text>
+ </mj-column>

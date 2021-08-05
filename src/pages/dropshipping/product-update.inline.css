@@ -1,0 +1,35 @@
+.theme-color {
+    color: #ff2368;
+}
+.link {
+    color: #ff2368;
+    text-decoration: underline;
+}
+
+.fix-table table {
+    table-layout: fixed;
+}
+.one-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.two-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.pc-hide {
+    display: none !important;
+}

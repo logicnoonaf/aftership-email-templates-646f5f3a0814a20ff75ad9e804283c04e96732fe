@@ -1,0 +1,23 @@
+<mj-include path="./product-list.css" type="css" />
+<mj-include path="./product-list.inline.css" type="css" css-inline="inline" />
+
+<mj-group css-class="pl-wrap">
+  <mj-column css-class="pl-thumb" width="11.54%" padding="0" vertical-align="middle">
+    <mj-image padding="0" src="https://dropshipping.am-static.com/images/p/3c84df28b17b61fcf33f2a047e215bd9.jpg?q=85" alt="product image" />
+  </mj-column>
+  <mj-column css-class="pl-content" vertical-align="middle" width="88.46%" padding-left="16px">
+    <mj-text>
+      <div class="pl-content-inner">
+        <div class="pl-text-wrap one-line">
+          <div class="one-line">Food Reward Dog Game Disc Board Disc Board boaFood Reward Dog Game Disc Board Disc Board boa</div>
+          <div class="pl-price">
+            $100.50 <span class="theme-color">→</span> $150
+          </div>
+        </div>
+        <a href="#todo" target="_blank" class="pl-action">Edit price</a>
+      </div>
+
+    </mj-text>
+  </mj-column>
+
+</mj-group>

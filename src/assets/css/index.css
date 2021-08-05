@@ -1,0 +1,141 @@
+.Card {
+  border-radius: 3px;
+  margin-top: 2rem !important;
+  overflow: hidden;
+  background-color: var(--p-surface, white);
+  -webkit-box-shadow: var(
+    --p-card-shadow,
+    0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15)
+  );
+  box-shadow: var(
+    --p-card-shadow,
+    0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15)
+  );
+  display: block;
+  margin-bottom: 2rem !important;
+}
+.Card--withour-border {
+  border-radius: 3px;
+  margin-top: 2rem !important;
+  overflow: hidden;
+  background-color: var(--p-surface, white);
+  -webkit-box-shadow: var(
+    --p-card-shadow,
+    0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15)
+  );
+  box-shadow: var(
+    --p-card-shadow,
+    0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15)
+  );
+  display: block;
+  margin-bottom: 2rem !important;
+}
+
+.Card__Header {
+  padding: 2rem 2rem 0;
+  box-sizing: border-box;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: black;
+}
+
+.Card__Section {
+  padding-top: 2rem;
+  box-sizing: border-box;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+.Card__Section + .Card__Section {
+  border-top: 0.1rem solid var(--p-border-subdued, #dfe3e8);
+}
+
+.Card__SectionHeader {
+  padding-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+
+.Custom-Badge__Pip {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  height: 0.25rem;
+  width: 0.25rem;
+  margin: 0 0.4rem 0 -0.3rem;
+  border: 0.3rem solid currentColor;
+  border-radius: 50%;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(currentColor),
+    color-stop(50%, currentColor),
+    color-stop(0, currentColor)
+  );
+  background: -o-linear-gradient(
+    bottom,
+    currentColor,
+    currentColor 50%,
+    currentColor 0
+  );
+  background: linear-gradient(
+    0deg,
+    currentColor,
+    currentColor 50%,
+    currentColor 0
+  );
+}
+
+.badge {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.Title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  margin: 0;
+}
+
+.DisplayText {
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+}
+
+.Sub_Title {
+  margin-bottom: 2rem;
+}
+
+.List_Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.List_Item + .List_Item {
+  margin-top: 1rem;
+}
+
+p {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

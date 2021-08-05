@@ -1,0 +1,392 @@
+<html>
+
+<body>
+
+    <container style="background-color: #FFF">
+        <spacer size="30"></spacer>
+        <container>
+            <center>
+                <img style="width: 400px" src="https://websites.am-static.com/weekly_report/automizely_marketing.png" />
+            </center>
+        </container>
+        <spacer size="20"></spacer>
+
+        {% if not no_data %}
+        <container style="background-color: rgba(255, 35, 104, 0.3) ;">
+            <spacer size="30"></spacer>
+            <center>
+                <span class="DisplayTextHeader__Automizely">Your weekly report</span>
+            </center>
+            <row>
+                <columns class="disPlayMobileHeaderNameDesc__Automizely" style="padding: 0 50px !important;">
+                    <center>
+                        <span class="headerNmaeDesc__Automizyly">Hi{% if first_name!="" %}&nbsp;[[first_name]]{% endif
+                            %}{% if
+                            last_name!="" %}&nbsp;[[last_name]]{% endif %}, here's your weekly summary for&nbsp;</span>
+                        <center class="dateDisplayFormobile__Automizely">
+                            <span class="date__Automizely">[[start_date]]</span><span class="date__Automizely"> -
+                            </span><span class="date__Automizely">[[end_date]]</span>
+                        </center>
+
+
+
+
+                    </center>
+                </columns>
+            </row>
+
+
+            <spacer size="30"></spacer>
+
+        </container>
+        {% endif %}
+
+        {% if no_data %}
+
+        <row>
+            <columns>
+                <center>
+                    <span>Uh oh. It looks like you had no data with Automizely last week.
+                        Please check to see that you're still logged in so we can send you
+                        your latest stats and awesome achievements!</span>
+                </center>
+            </columns>
+        </row>
+        {% endif %}
+
+        <div class="Card" style="border-top: 0px">
+            {% if has_popup %}
+            <div class="Card__Section automizely-data">
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText__Automizely">Popups</div>
+                        </center>
+                    </columns>
+                </row>
+
+
+                <row>
+
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[popup_views_count]]</span>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total views</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[popup_subscribers_count]]</sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total subscribers</span>
+
+                        </div>
+                    </columns>
+                </row>
+
+                <row>
+                    <columns large="2">
+
+                        <center>
+                            <div class="ViewAll__Automizely">
+                                <a href="https://conversions.automizely.com/popups?utm_medium=weeklyreport&utm_campaign=popup"
+                                    style="line-height: 48px;color: #FFF;">View full report</a>
+                            </div>
+                        </center>
+                    </columns>
+                </row>
+            </div>
+            {% endif %}
+
+            {% if has_welcome_email %}
+            <div class="Card__Section automizely-data">
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText__Automizely">Welcome emails</div>
+                        </center>
+                    </columns>
+                </row>
+                <row>
+
+
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_welcome_clicks_count]]</span>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total sent</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_welcome_opened_count]]</sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total opened</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_welcome_clicked_count]]</sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total clicked</span>
+
+                        </div>
+                    </columns>
+                </row>
+
+
+                <row>
+                    <columns large="2">
+
+                        <center>
+                            <div class="ViewAll__Automizely">
+                                <a href="https://conversions.automizely.com/emails?utm_medium=weeklyreport&utm_campaign=popup"
+                                    style="line-height: 48px;color: #FFF;">View full report</a>
+                            </div>
+                        </center>
+                    </columns>
+                </row>
+            </div>
+            {% endif %}
+
+            {% if has_abandoned_cart_email %}
+            <div class="Card__Section automizely-data">
+
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText__Automizely">Abandoned cart</div>
+                        </center>
+                    </columns>
+                </row>
+
+
+                <row>
+
+
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span
+                                class="text-center DataOfReport__Automizely">[[cv_email_abandoned_cart_clicks_count]]</span>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total sent</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_abandoned_cart_opened_count]]
+                                </sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total opened</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_abandoned_cart_clicked_count]]
+                                </sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total clicked</span>
+
+                        </div>
+                    </columns>
+                </row>
+
+                <row>
+                    <columns large="2">
+
+                        <center>
+                            <div class="ViewAll__Automizely">
+                                <a href="https://conversions.automizely.com/abandonedcart?utm_medium=weeklyreport&utm_campaign=popup"
+                                    style="line-height: 48px;color: #FFF;">View full report</a>
+                            </div>
+                        </center>
+                    </columns>
+                </row>
+            </div>
+            {% endif %}
+
+            {% if has_newsletter_email %}
+            <div class="Card__Section automizely-data">
+
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText__Automizely">Newsletter</div>
+                        </center>
+                    </columns>
+                </row>
+
+                <row>
+
+
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span
+                                class="text-center DataOfReport__Automizely">[[cv_email_newsletter_clicks_count]]</span>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total sent</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_newsletter_opened_count]]
+                                </sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total opened</span>
+
+                        </div>
+                    </columns>
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_email_newsletter_clicked_count]]
+                                </sapn>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total clicked</span>
+
+                        </div>
+                    </columns>
+                </row>
+
+
+                <row>
+                    <columns large="2">
+
+                        <center>
+                            <div class="ViewAll__Automizely">
+                                <a href="https://conversions.automizely.com/newsletters?utm_medium=weeklyreport&utm_campaign=popup"
+                                    style="line-height: 48px;color: #FFF;">View full report</a>
+                            </div>
+                        </center>
+                    </columns>
+                </row>
+            </div>
+            {% endif %}
+
+            {% if has_tab %}
+            <div class="Card__Section automizely-data">
+
+
+                <row>
+                    <columns>
+                        <center>
+                            <div class="DisplayText__Automizely">Inactive tab</div>
+                        </center>
+                    </columns>
+                </row>
+                <row>
+
+
+                    <columns class="playBlockFormobile dataReportWrapper__Automizely" small="6">
+                        <div>
+                            <span class="text-center DataOfReport__Automizely">[[cv_tab_clicks_count]]</span>
+
+                        </div>
+                        <div>
+                            <span class="text-center UnderDesc__Automizely">Total clicked</span>
+
+                        </div>
+                    </columns>
+
+                </row>
+
+
+                <row>
+                    <columns large="2">
+
+                        <center>
+                            <div class="ViewAll__Automizely">
+                                <a href="https://conversions.automizely.com/tabs?utm_medium=weeklyreport&utm_campaign=inactivetab"
+                                    style="line-height: 48px;color: #FFF;">View full report</a>
+                            </div>
+                        </center>
+                    </columns>
+                </row>
+            </div>
+            {% endif %}
+
+            <div class="Card__Section automizely-data" style="font-size: 14px;">
+                <center>
+
+                    <div class="supportText__Automizely">
+
+                        Feel free to contact our support ream available 24/7 via <a
+                            href="https://go.crisp.chat/chat/embed/?website_id=6e6bbcca-f355-44a5-91dc-5c0f87736786"
+                            style="color: rgba(235,63,106, 1);text-decoration: underline;">live chat</a> , if you have
+                        any questions
+
+                    </div>
+                </center>
+            </div>
+
+
+
+
+            <div class="Card__Section automizely-data footerText__Automizely">
+                <spacer size="10"></spacer>
+
+                <center>
+                    <a href="https://www.automizely.com/contact-us">Contact us</a>
+                    | <a href="https://blog.automizely.com/">Read our blog</a>
+                </center>
+                <center>
+                    2711 Centerville Road, Wilmington, Delaware 19808, United States
+                </center>
+                <center>
+                    © 2021
+                    <a href="https://www.automizely.com">Automizely</a>
+                </center>
+                <center>
+                    <a href="[unsubscribe]" style="text-decoration: underline;">Unsubscribe</a>
+
+                </center>
+                <center>
+                    <menu>
+                        <item href="https://www.facebook.com/aftership"><img style="height: 24px; display: inline-block"
+                                src="https://websites.am-static.com/weekly_report/facebook.png" />
+                        </item>
+                        <item href="https://twitter.com/aftership"><img style="height: 24px; display: inline-block"
+                                src="https://websites.am-static.com/weekly_report/twitter.png" />
+                        </item>
+
+                    </menu>
+                </center>
+                <spacer size="10"></spacer>
+
+            </div>
+        </div>
+
+
+    </container>
+
+</body>
+
+</html>

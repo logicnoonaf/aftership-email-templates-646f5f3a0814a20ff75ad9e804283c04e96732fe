@@ -1,0 +1,227 @@
+<!-- DO NOT FORMAT THIS FILE -->
+<!-- code insie raw tag inky lib will be ignored  -->
+<!-- but inky current has a bug, the regex dont match LF between raw tag -->
+<html>
+<body>
+  <!-- header -->
+  <container style="background-color: transparent;">
+    <row>
+      <columns>
+        <spacer size="50"></spacer>
+        <center>
+          <img 
+            style="width: 220px"
+            width="220"
+            alt="aftership logo"
+            src="http://cdn.mcauto-images-production.sendgrid.net/58abdbabee4e8994/986ce085-178c-4cc1-9ad9-71d5114f5f41/740x139.png" />
+        </center>
+        <spacer size="20"></spacer>
+      </columns>
+    </row>
+  </container>
+  <!-- body -->
+  <container> 
+    <div style="border:1px #e0e0e0 solid;border-radius:3px;">
+      <spacer size="48"></spacer>
+      <row>
+        <columns large="1" class="show-for-large"></columns>
+        <columns large="10" small="12" class="expender">
+          <center>
+            <p class="text-center" style="font-size: 20px;font-weight: 600;line-height: 1.5;color: #333333;word-break: break-word;">
+              Hello, you have received <raw><%= total_reviews_count %></raw> new shipment reviews in the last 24 hours.
+            </p>
+          </center>
+        </columns>
+        <columns large="1" class="show-for-large"></columns>
+      </row>
+      <!-- start of a review -->
+      <raw><% for(let i=0; i < shipment_reviews.length && i < 3; i++) {%></raw>
+      <raw><% var shipment=shipment_reviews[i] %></raw>
+      <div>
+        <row>
+          <columns>
+            <center>
+              <div class="shipment-review-daily__star">
+                <raw><% for(let j=0; j < shipment.rating; j++) { %></raw>
+                <img 
+                  height="32"
+                  height="32"
+                  style="display:inline-block;width:32px;height:32px;"
+                  alt=""
+                  src="http://images.mxpnl.com/stripo/pluginId_dc7315ea7f004add9434b160b083b8b5_/2096676/images/a71796e0e3f5c908fe50c0fd8d267289.png" />
+                <raw><% } %></raw>
+                <raw><% for(let k=0; k < 5 - shipment.rating; k++) { %></raw>
+                <img 
+                  width="32"
+                  height="32"
+                  style="display:inline-block;width:32px;height:32px;"
+                  alt=""
+                  src="http://images.mxpnl.com/stripo/pluginId_dc7315ea7f004add9434b160b083b8b5_/2096676/images/8702082d48264482a96b6da74e1b82b5.png" />
+                <raw><% } %></raw>
+              </div>
+            </center>
+          </columns>
+        </row>
+
+        <row>
+          <columns>
+            <center>
+              <p class="text-center" style="font-size: 16px;line-height: 1.5;;color: #999999">
+                <raw><% let rateDescription=['Very bad','Poor','Average','Good','Very satisfied'] %></raw>
+                <raw><%= rateDescription[shipment.rating - 1] %></raw>
+              </p>
+            </center>
+          </columns>
+        </row>
+        
+        <row>
+          <columns large="1" small="12" class="show-for-large"></columns>
+          <columns large="10" small="12" >
+            <table>
+              <tbody>
+                <tr>
+                  <th style="text-align: center;">
+                    <raw><% for(let g=0; g < shipment.quick_comments.length; g++) {%></raw>
+                      <span style="display: inline-block;padding: 10px 10px 0 0 !important;">
+                        <span class="shipment-review-daily__comment">
+                          <raw><%= shipment.quick_comments[g]%></raw>
+                        </span>
+                      </span>
+                    <raw><% } %></raw>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </columns>
+          <columns large="1" small="12" class="show-for-large"></columns>
+        </row>
+
+        <row style="margin-top: 16px;">
+          <columns large="1" class="show-for-large"></columns>
+          <columns large="10" small="12">
+            <p class="text-left" style="font-size: 14px;line-height: 1.43;">
+              <raw><%= shipment.detail_comment %></raw>
+            </p>
+          </columns>
+          <columns large="1" class="show-for-large"></columns>
+        </row>
+
+        <row>
+          <columns large="1" class="show-for-large"></columns>
+          <columns large="10" small="12">
+            <div class="shipment-review-daily__info">
+              <div>
+                <span>Tracking #</span>
+                <span>
+                  <a href="https://admin.aftership.com/shipments/<raw><%= shipment.tracking.legacy_id %></raw>?utm_source=shipment review notification&utm_medium=email&utm_campaign=daily report&utm_content=trackin number"
+                    target="_blank">
+                    <raw><%= shipment.tracking.tracking_number %></raw>
+                  </a>
+                </span>
+              </div>
+              <div class="shipment-review-daily__courier">
+                <span>Carrier</span>
+                <span>
+                  <img width="16" height="16" alt=""
+                    src="https://assets.aftership.com/couriers/png/128x128/<raw><%= shipment.tracking.slug %></raw>.png" />
+                  <span>
+                    <raw><%= shipment.courier.name %></raw>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <span>Status</span>
+                <span>
+                  <raw><%= shipment.tracking_status_on_review %></raw>
+                </span>
+              </div>
+              <div>
+                <span>Transit time</span>
+                <span>
+                  <raw><%= shipment.tracking.transit_time %> day<%= shipment.tracking.transit_time > 1 ? "s" : "" %></raw>
+                </span>
+              </div>
+              <div>
+                <span>Destination</span>
+                <span>
+                  <raw><%= shipment.tracking.destination_country ? shipment.tracking.destination_country : "-" %></raw>
+                </span>
+              </div>
+            </div>
+          </columns>
+          <columns large="1" class="show-for-large"></columns>
+        </row>
+
+        <row>
+          <columns large="1" class="show-for-large"></columns>
+          <columns large="10" small="12">
+            <hr class="shipment-review-daily__hr" />
+          </columns>
+          <columns large="1" class="show-for-large"></columns>
+
+        </row>
+      </div>
+      <raw><% } %></raw>
+      <!-- end of a review  -->
+
+
+      <div>
+        <center>
+          <div class="shipment-review-daily__btn">
+            <button class="warning radius large"
+              href="https://admin.aftership.com/dashboard/shipment-review?utm_source=shipment review notification&utm_medium=email&utm_campaign=daily report&utm_content=view review btn"
+              target="_blank">
+              View <raw><%= total_reviews_count===1 ? "" : "all" %></raw> reviews
+            </button>
+          </div>
+        </center>
+      </div>
+      <spacer size="48"></spacer>
+    </div>
+  </container>
+
+  <!-- footer -->
+  <div style="background-color: transparent;">
+    <spacer size="48"></spacer>
+    <center>
+      <menu>
+        <item href="https://www.facebook.com/aftership" target="_blank">
+          <img
+            style="width:32px;height:32px;display:inline-block;margin-right:6px;"
+            width="32"
+            height="32"
+            alt="facebook"
+            src="http://images.mxpnl.com/stripo/pluginId_dc7315ea7f004add9434b160b083b8b5_/2096676/images/fecd979e290ab10d8951c58b079dd916.png" />
+        </item>
+        <item href="https://twitter.com/aftership" target="_blank">
+          <img
+            style="width:32px;height:32px;display:inline-block;margin-right:6px;"
+            width="32"
+            height="32"
+            alt="twitter"
+            src="http://images.mxpnl.com/stripo/pluginId_dc7315ea7f004add9434b160b083b8b5_/2096676/images/61add57d8408038ad1ada55783ff2884.png" />
+        </item>
+        <item href="https://www.instagram.com/aftership" target="_blank">
+          <img 
+            style="width:32px;height:32px;display:inline-block;"
+            width="32"
+            height="32"
+            alt="instagram"
+            src="http://images.mxpnl.com/stripo/pluginId_dc7315ea7f004add9434b160b083b8b5_/2096676/images/696090105c3fd31a27a554b91db0aab0.png" />
+        </item>
+      </menu>
+    </center>
+    <spacer size="12"></spacer>
+    <center>
+      <div class="text-center" style="color:#212b36;line-height: 20px;">
+        <a style="color:#212b36;"
+          href="https://help.aftership.com/hc/en-us/requests/new?topics=product_questions&product=aftership&utm_source=shipment review notification&utm_medium=email&utm_campaign=daily report&utm_content=Contact us link"
+          target="_blank">Contact us</a> | <a style="color:#212b36;" href="" target="_blank">Unsubscribe</a>
+      </div>
+      <div class="text-center" style="color:#212b36;line-height: 20px;">© <raw><%= new Date().getUTCFullYear()%></raw> AfterShip</div>
+    </center>
+    <spacer size="40"></spacer>
+  </div>
+</body>
+
+</html>

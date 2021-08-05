@@ -1,0 +1,13 @@
+.pr-price-compare del {
+    color: #6d7175;
+}
+
+.pr-price-compare .pr-save {
+    padding: 2px 8px;
+    background-color: #ffd79d;
+    color: #202223;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 10px;
+}

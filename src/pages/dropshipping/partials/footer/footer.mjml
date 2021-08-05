@@ -1,0 +1,23 @@
+<mj-include path="./footer.inline.css" type="css" css-inline="inline" />
+<mj-section>
+  <mj-column>
+    <mj-text css-class="ft-txt" align="center">
+      <a href="https://www.automizely.com/dropshipping/contact-us" target="_blank">Contact us</a>
+      |
+      <a href="https://blog.automizely.com" target="_blank">Read our blog</a>
+    </mj-text>
+    <mj-text css-class="ft-txt" align="center">
+      2711 Centerville Road, Wilmington, Delaware 19808, United States
+    </mj-text>
+    <mj-text css-class="ft-txt" align="center">
+      © 2021 Automizely
+    </mj-text>
+    <mj-text css-class="ft-txt" align="center">
+      <a href="%dropshipping_unsubscribe_link%" target="_blank">Unsubscribe</a>
+    </mj-text>
+    <mj-social padding-top="20px">
+      <mj-social-element src="https://websites.am-static.com/assets/email/facebook-grey.png?v1" href="https://www.facebook.com/aftership"></mj-social-element>
+      <mj-social-element src="https://websites.am-static.com/assets/email/twitter-grey.png?v1" href="https://twitter.com/aftership"></mj-social-element>
+    </mj-social>
+  </mj-column>
+</mj-section>

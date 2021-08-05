@@ -1,0 +1,6 @@
+ <!-- Product logo -->
+ <mj-section css-class="fix-padding">
+   <mj-column>
+     <mj-image padding="0" height="33px" src="https://websites.am-static.com/assets/logos/Logo/logo_automizelydropshipping.svg" href="https://www.automizely.com/dropshipping?utm-source=notice-prod-change&utm-meduim=email" target="_blank" />
+   </mj-column>
+ </mj-section>

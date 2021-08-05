@@ -1,0 +1,18 @@
+.pl-content {
+    width: auto !important;
+    max-width: none !important;
+}
+
+@media only screen and (max-width: 480px) {
+    .pl-content-inner {
+        display: block !important;
+    }
+
+    .pl-price {
+        padding-top: 0 !important;
+    }
+
+    .pl-action {
+        padding-left: 0 !important;
+    }
+}
